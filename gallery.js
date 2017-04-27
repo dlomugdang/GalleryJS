@@ -33,6 +33,9 @@ function shuffleGallery()
   do
   {
     element = chico[Math.floor(Math.random() * chico.length)];
+    document.getElementById("picture").src = element.picture;
+    document.getElementById("caption").innerHTML = element.description;
+    document.getElementById("source").innerHTML = "Image courtesy of: " + element.from;
   }
   while (element == current);
   console.log(element);
